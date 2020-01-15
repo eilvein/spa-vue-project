@@ -1,0 +1,86 @@
+{
+    "name": "spa-vue-project",
+    "version": "0.2.8",
+    "description": "vue-cli4 es6 sass template for front-end development",
+    "main": "index.js",
+    "private": true,
+    "author": "Eilvein",
+    "email": "eilvein@qq.com",
+    "license": "MIT",
+    "keywords": [
+        "frontend",
+        "webpack",
+        "vue",
+        "vue-cli",
+        "es6",
+        "prettier",
+        "sass",
+        "git-cz"
+    ],
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "serve-local": "vue-cli-service serve --mode local",
+        "build": "vue-cli-service build",
+        "build-release": "vue-cli-service build --mode release",
+        "build-beta": "vue-cli-service build --mode beta",
+        "lint": "vue-cli-service lint",
+        "commit": "git-cz",
+        "commit-retry": "git-cz --retry",
+        "commit-noverify": "git-cz --no-verify",
+        "push": "git push --follow-tags origin master",
+        "precommit": "pretty-quick --staged",
+        "version": "standard-version",
+        "release": "bash release.sh"
+    },
+    "dependencies": {
+        "axios": "^0.19.1",
+        "core-js": "^3.4.4",
+        "vue": "^2.6.10",
+        "vue-router": "^3.1.3",
+        "vuex": "^3.1.2"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^8.3.4",
+        "@commitlint/config-conventional": "^8.3.4",
+        "@vue/cli-plugin-babel": "^4.1.0",
+        "@vue/cli-plugin-eslint": "^4.1.0",
+        "@vue/cli-plugin-router": "^4.1.0",
+        "@vue/cli-plugin-vuex": "^4.1.0",
+        "@vue/cli-service": "^4.1.0",
+        "@vue/eslint-config-prettier": "^5.0.0",
+        "babel-eslint": "^10.0.3",
+        "commitizen": "^4.0.3",
+        "commitlint-config-cz": "^0.12.1",
+        "conventional-changelog": "^3.1.18",
+        "conventional-changelog-cli": "^2.0.31",
+        "cz-customizable": "^6.2.0",
+        "eslint": "^5.16.0",
+        "eslint-plugin-prettier": "^3.1.1",
+        "eslint-plugin-vue": "^5.0.0",
+        "lint-staged": "^9.5.0",
+        "prettier": "^1.19.1",
+        "pretty-quick": "^2.0.1",
+        "sass": "^1.23.7",
+        "sass-loader": "^8.0.0",
+        "standard-version": "^7.0.1",
+        "vue-template-compiler": "^2.6.10"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged",
+        "commit-msg": "commitlint -e $GIT_PARAMS"
+    },
+    "lint-staged": {
+        "*.{js,vue}": [
+            "vue-cli-service lint",
+            "git add"
+        ]
+    },
+    "config": {
+        "commitizen": {
+            "path": "node_modules/cz-customizable"
+        },
+        "cz-customizable": {
+            "config": "./cz.config.js"
+        }
+    }
+}

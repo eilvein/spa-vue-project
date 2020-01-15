@@ -1,0 +1,124 @@
+@import 'base/variable';
+@import 'base/mixin';
+@import 'base/border';
+@import 'base/normalize';
+@import 'base/reset';
+
+html {
+    @include root-font-size();
+}
+
+// demo
+body {
+    font-size: px2rem(28);
+}
+
+header {
+    text-align: center;
+    font-size: px2rem(26);
+    // 字体也可以选择不使用rem
+    // @include font-size(30px);
+}
+
+nav {
+    padding: px2rem(30);
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            width: px2rem(200);
+            justify-content: center;
+        }
+
+        .icon {
+            margin-bottom: px2rem(20);
+            width: px2rem(120);
+            height: px2rem(120);
+            line-height: px2rem(120);
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+    }
+}
+
+.container {
+    background-color: #fff;
+}
+
+.banner {
+    height: px2rem(300);
+    line-height: px2rem(300);
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+main {
+    padding: px2rem(20);
+
+    h3 {
+        position: relative;
+        margin-top: px2rem(50);
+        margin-left: px2rem(26);
+        font-size: px2rem(30);
+        text-align: left;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: px2rem(-20);
+            width: px2rem(12);
+            height: 100%;
+            background-color: #42b983;
+        }
+    }
+}
+
+.info-items {
+    margin-top: px2rem(20);
+    margin-bottom: px2rem(20);
+}
+
+.info-item {
+    margin-top: px2rem(10);
+    padding: px2rem(15);
+    padding-left: 0;
+    display: flex;
+}
+
+.info-confirm {
+    margin-bottom: px2rem(40);
+    text-align: center;
+
+    &__btn {
+        display: inline-block;
+        margin-top: px2rem(80);
+        width: px2rem(710);
+        height: px2rem(80);
+        line-height: px2rem(80);
+        text-align: center;
+        background-color: #42b983;
+        text-decoration: none !important;
+        color: #fff !important;
+    }
+}
+
+.example1 {
+    height: 50px;
+    line-height: 50px;
+    border: 0;
+    border: 1px solid;
+    border-radius: 10px;
+    border-image: svg(1px-border param(--color red)) 1 stretch;
+}
+
+.example2 {
+    margin-top: 20px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid red;
+}
