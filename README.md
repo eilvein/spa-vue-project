@@ -58,7 +58,7 @@ yarn lint
 
 ### 优雅的提交你的 Git Commit Message
 
-> 为了 Git Commit 标准化，项目增加了 commitizen(git-cz)
+> 为了 Git Commit 标准化，项目增加了 [commitizen](https://github.com/commitizen/cz-cli)(git-cz)
 
 ```
 yarn commit
@@ -79,8 +79,6 @@ yarn commit
 | ci       | 更改持续集成软件的配置文件和 package 中的 scripts 命令，例如 scopes: Travis, Circle 等 |
 | chore    | 变更构建流程或辅助工具                                                                 |
 | revert   | 代码回退                                                                               |
-
-[See](https://github.com/commitizen/cz-cli).
 
 ### Customize configuration
 
