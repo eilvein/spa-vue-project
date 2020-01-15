@@ -80,7 +80,7 @@ yarn commit
 | chore    | 变更构建流程或辅助工具                                                                 |
 | revert   | 代码回退                                                                               |
 
-See [Configuration Reference](https://github.com/commitizen/cz-cli).
+[See](https://github.com/commitizen/cz-cli).
 
 ### Customize configuration
 
