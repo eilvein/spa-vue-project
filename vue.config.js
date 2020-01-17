@@ -11,7 +11,7 @@ module.exports = {
     runtimeCompiler: true,
     devServer: {
         open: ISPROD,
-        host: 'fedev.roobo.net',
+        // host: 'fedev.roobo.net',
         proxy: {
             '/api': {
                 target: 'http://aiedit-api.roobo.net',

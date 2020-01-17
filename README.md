@@ -40,7 +40,7 @@ yarn build-beta
 yarn build
 ```
 
-#### 版本生成
+#### 版本 tag 生成
 
 ```
 git checkout master
@@ -81,5 +81,14 @@ yarn commit
 | revert   | 代码回退                                                                               |
 
 ### Customize configuration
+
+### Rem+VW 移动端适配
+
+```
+# html5
+@import './assets/styles/app'
+# web
+@import './assets/styles/index'
+```
 
 See [Configuration Reference](https://cli.vuejs.org/config/).

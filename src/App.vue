@@ -10,7 +10,10 @@
 </template>
 
 <style lang="scss">
+// html5 app
 @import './assets/styles/app';
+// web
+// @import './assets/styles/index';
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;

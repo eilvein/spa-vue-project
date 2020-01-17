@@ -6,6 +6,7 @@
 
 html {
     @include root-font-size();
+    background: #f4f5f5;
 }
 
 // demo
@@ -50,11 +51,13 @@ nav {
     background-color: #fff;
 }
 
+/* 容器宽高比 */
 .banner {
-    height: px2rem(300);
-    line-height: px2rem(300);
+    line-height: px2rem(150);
     text-align: center;
     background-color: #f2f2f2;
+
+    @include aspect-ratio($sub: '.banner-content', $aspectX: 375, $aspectY: 150);
 }
 
 main {
@@ -107,18 +110,72 @@ main {
     }
 }
 
-.example1 {
+.demo-item {
+    margin: 10px 0;
     height: 50px;
     line-height: 50px;
-    border: 0;
-    border: 1px solid;
-    border-radius: 10px;
-    border-image: svg(1px-border param(--color red)) 1 stretch;
 }
 
+// .example1 {
+
+//     border: 0;
+//     border: 1px solid;
+//     border-radius: 10px;
+//     border-image: svg(1px-border param(--color red)) 1 stretch;
+// }
+
 .example2 {
-    margin-top: 20px;
-    height: 50px;
-    line-height: 50px;
     border: 1px solid red;
+}
+
+.d-border {
+    @include border($direction: all, $size: 1px, $color: #ddd, $style: solid, $radius: 5px);
+
+    /* 多个边框的动态更新 */
+    &.hover {
+        @include border(
+            $direction: (
+                top,
+                right,
+                bottom,
+                left
+            ),
+            $size: (
+                3px,
+                2px,
+                1px
+            ),
+            $color: (
+                #0f0,
+                #ddd
+            ),
+            $style: dotted
+        );
+    }
+}
+
+.d-border-1 {
+    /* 单个边框调用 */
+    @include border($direction: left);
+
+    /* 单个边框的动态更新 */
+    &.hover {
+        @include border($direction: left, $size: 10px, $color: rgb(5, 105, 255));
+    }
+}
+
+.d-border-bottom {
+    @include border($direction: bottom, $size: 1px, $color: #ddd, $style: solid);
+}
+
+/* 圆角边框自定义多个角，顺序 */
+.d-border-radius {
+    @include border(
+        $radius: (
+            20px,
+            20px,
+            20px,
+            20px
+        )
+    );
 }

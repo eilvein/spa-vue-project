@@ -177,10 +177,9 @@
         box-sizing: border-box;
         -webkit-transform-origin: top left;
 
-        @media only screen and (-webkit-device-pixel-ratio: 2) {
+        @media only screen and (-webkit-device-pixel-ratio: 2), only screen and (-webkit-device-pixel-ratio: 2.75) {
             width: 200%;
             height: 200%;
-
             @include border-radius($radius, 2);
 
             -webkit-transform: scale(0.5, 0.5);

@@ -22,12 +22,12 @@
         <main>
             <h3>信息</h3>
             <div class="info-items">
-                <div class="example1">
-                    1px
-                </div>
-                <div class="example2">
-                    1px
-                </div>
+                <!-- <div class="demo-item example1">1px</div> -->
+                <div class="demo-item example2">1px</div>
+                <div class="demo-item d-border">1px</div>
+                <div class="demo-item d-border-1 hover">1px</div>
+                <div class="demo-item d-border-bottom">1px</div>
+                <div class="demo-item d-border-radius">1px</div>
             </div>
             <div class="info-confirm">
                 <a href="javascript:;" class="info-confirm__btn">确认</a>
